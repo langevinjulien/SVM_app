@@ -24,10 +24,10 @@ ui <- shinyUI(
                 menuItem("Principe du SVM", tabName = "principe", icon = icon("cog")),
                 menuItem("Exploration des données", tabName= "param", icon = icon("download")),
                 menuItem("Comparaisons", tabName = "comparaisons", icon = icon("cog"),
-                         menuSubItem("Régression Logistique", tabName = "pd_ttc"),
+                         menuSubItem("Régression Logistique", tabName = "logit"),
                          menuSubItem("Arbre de décision", tabName = "tree", icon=icon("tree")),
                          menuSubItem("Random Forest", tabName = "shift", icon=icon("cog", lib="glyphicon")),
-                         menuSubItem("Gradient Boosting", tabName = "pd_ifrs9", icon=icon("bootstrap")))
+                         menuSubItem("Gradient Boosting", tabName = "gboost", icon=icon("bootstrap")))
             )
             
         ),

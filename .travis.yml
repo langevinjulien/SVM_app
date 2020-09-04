@@ -1,0 +1,46 @@
+dist: xenial
+sudo: false
+latex: true
+language: r
+r: release
+
+warnings_are_errors: false
+
+cache:
+  packages: true
+
+apt_packages:
+  - libgdal-dev
+- libudunits2-dev
+- mesa-common-dev
+- libglu1-mesa-dev
+
+r_packages:
+  - rsconnect
+- shiny
+- tidyverse
+- kableExtra
+- e1071
+- data.table
+- ggplot2
+- pROC
+- rmarkdown
+- caret
+- randomForest
+- DT
+- corrplot
+- rgl
+- class
+
+script:
+  - R -f deploy.R
+
+notifications:
+  email:
+  - langevin.julien@gmail.com
+
+email:
+  recipients:
+  - langevin.julien@gmail.com
+on_success: <always|never|change>  # default: change
+  on_failure: <always|never|change>  # default: always
